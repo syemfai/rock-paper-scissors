@@ -45,11 +45,11 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    const playerSelection = "rock";
     for (let i = 0; i < 5; i++) {
+        let playerSelection = prompt("Rock, paper or scissors: ");
         let computerSelection = computerPlay();
         console.log(playRound(playerSelection, computerSelection));
-        console.log(computerScore);
+        console.log(`Your score: ${playerScore}, Computer Score: ${computerScore}`);
     }
 }
 
