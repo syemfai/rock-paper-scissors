@@ -14,31 +14,31 @@ function playRound(playerSelection, computerSelection) {
     }
     else if (playerSelection === "rock") {
         if (computerSelection === "paper") {
-            globalThis.computerScore++ ;
+            computerScore++ ;
             return "You Lose! Paper beats Rock";
         }
         else {
-            globalThis.playerScore++ ;
+            playerScore++ ;
             return "You Win! Rock beats Scissors";
         }
     }
     else if (playerSelection === "paper") {
         if (computerSelection === "scissors") {
-            globalThis.computerScore++ ;
+            computerScore++ ;
             return "You Lose! Scissors beats Paper";
         }
         else {
-            globalThis.playerScore++ ;
+            playerScore++ ;
             return "You Win! Paper beats Rock";
         }
     }
     else if (playerSelection === "scissors") {
         if (computerSelection === "paper") {
-            globalThis.playerScore++ ;
+            playerScore++ ;
             return "You Win! Scissors beats Paper";
         }
         else {
-            globalThis.computerScore++ ;
+            computerScore++ ;
             return "You Lose! Rock beats Scissors";
         }
     }
@@ -49,7 +49,7 @@ function game() {
     for (let i = 0; i < 5; i++) {
         let computerSelection = computerPlay();
         console.log(playRound(playerSelection, computerSelection));
-        console.log(globalThis.computerScore);
+        console.log(computerScore);
     }
 }
 
